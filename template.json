@@ -1,3 +1,4 @@
+# схема жсона изначально с ошибками в "depotNumber": "123" и "is_active": null
 {  
   "vehicles": [  
     {  
