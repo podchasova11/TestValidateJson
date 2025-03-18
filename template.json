@@ -1,4 +1,4 @@
-# схема жсона изначально с ошибками в "depotNumber": "123" и "is_active": null
+# схема json изначально с ошибками в "depotNumber": "123" и "is_active": null, тк это задачка с собеса
 {  
   "vehicles": [  
     {  
