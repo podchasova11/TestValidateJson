@@ -9,7 +9,7 @@ TestValidateJson/
 │  
 └── validate.py      # Файл с кодом для валидации  
 ```
-В терминале выполните команду:
+В терминале выполнить команду:
 ```
 pip install jsonschema
 ```
