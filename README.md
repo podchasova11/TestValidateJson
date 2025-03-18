@@ -1,5 +1,6 @@
 # TestValidateJson
 В проекте создать три файла: template.json, schema.json, и validate.py.
+```
 TestValidateJson/  
 │  
 ├── template.json   # Файл с данными ответа сервера  
@@ -7,7 +8,7 @@ TestValidateJson/
 ├── schema.json     # Файл со схемой валидации  
 │  
 └── validate.py      # Файл с кодом для валидации  
-
+```
 В терминале выполните команду:
 ```
 pip install jsonschema
