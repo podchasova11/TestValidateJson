@@ -1,4 +1,4 @@
-# TestValidateJson
+# TestValidateJson  техсобес Транстелематика
 В проекте создать три файла: template.json, schema.json, и validate.py.
 ```
 TestValidateJson/  
