@@ -1,0 +1,14 @@
+{  
+  "vehicles": [  
+    {  
+      "gosNumber": "string1",  
+      "depotNumber": "123",  
+      "is_active": true  
+    },  
+    {  
+      "gosNumber": "string2",  
+      "depotNumber": 456,  
+      "is_active": false  
+    }  
+  ]  
+}  
