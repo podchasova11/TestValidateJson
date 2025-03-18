@@ -6,9 +6,9 @@
       "is_active": true  
     },  
     {  
-      "gosNumber": "string2",  
+      "gosNumber": "string2",
       "depotNumber": 456,  
-      "is_active": false  
+      "is_active": null
     }  
   ]  
 }  
