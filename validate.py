@@ -1,3 +1,42 @@
+import json
+import jsonschema
+from jsonschema import validate
+from jsonschema.exceptions import ValidationError
+
+# Загрузка данных из template.json
+with open('template.json', 'r') as f:
+    data = json.load(f)
+
+# Загрузка схемы из schema.json
+with open('schema.json', 'r') as f:
+    schema = json.load(f)
+
+
+# Функция для валидации с накоплением ошибок
+def validate_data(data, schema):
+    errors = []
+
+    if "vehicles" not in data:
+        errors.append("Ошибка: отсутствует поле 'vehicles'.")
+    else:
+        for index, vehicle in enumerate(data["vehicles"]):
+            try:
+                validate(instance=vehicle, schema=schema["properties"]["vehicles"]["items"])
+            except ValidationError as e:
+                errors.append(f"Ошибка в элементе {index + 1}: {e.message}")
+
+    if errors:
+        print("Ошибки валидации:")
+        for error in errors:
+            print(f" - {error}")
+    else:
+        print("Данные корректные.")
+
+    # Вызов функции валидации
+
+
+validate_data(data, schema)
+
 # import json
 #
 # import data
@@ -102,42 +141,3 @@
 # # Вызов функции валидации
 # validate_data(data, schema)
 
-
-import json
-import jsonschema
-from jsonschema import validate
-from jsonschema.exceptions import ValidationError
-
-# Загрузка данных из template.json
-with open('template.json', 'r') as f:
-    data = json.load(f)
-
-# Загрузка схемы из schema.json
-with open('schema.json', 'r') as f:
-    schema = json.load(f)
-
-
-# Функция для валидации с накоплением ошибок
-def validate_data(data, schema):
-    errors = []
-
-    if "vehicles" not in data:
-        errors.append("Ошибка: отсутствует поле 'vehicles'.")
-    else:
-        for index, vehicle in enumerate(data["vehicles"]):
-            try:
-                validate(instance=vehicle, schema=schema["properties"]["vehicles"]["items"])
-            except ValidationError as e:
-                errors.append(f"Ошибка в элементе {index + 1}: {e.message}")
-
-    if errors:
-        print("Ошибки валидации:")
-        for error in errors:
-            print(f" - {error}")
-    else:
-        print("Данные корректные.")
-
-    # Вызов функции валидации
-
-
-validate_data(data, schema)
