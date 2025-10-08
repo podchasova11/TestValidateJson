@@ -32,9 +32,7 @@ def validate_data(data, schema):
     else:
         print("Данные корректные.")
 
-    # Вызов функции валидации
-
-
+# Вызов функции валидации
 validate_data(data, schema)
 
 # import json
