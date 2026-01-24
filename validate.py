@@ -7,6 +7,7 @@ from jsonschema.exceptions import ValidationError
 with open('template.json', 'r') as f:
     data = json.load(f)
 
+
 # Загрузка схемы из schema.json
 with open('schema.json', 'r') as f:
     schema = json.load(f)
